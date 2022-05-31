@@ -1,0 +1,39 @@
+﻿@model TaskTracker.Models.Task
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AddingTaskForm</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body>
+    <div class="panel panel-success">
+        <div class="panel-heading text-center"><h4>Form for adding a task</h4></div>
+        <div class="panel-body">
+            <form class="p-a-1" asp-action="AddingTaskForm" method="post">
+                <div asp-validation-summary="All"></div>
+                <div class="form-group">
+                    <label asp-for="Name">Task name:</label>
+                    <input class="form-control" asp-for="Name" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="Description">Description:</label>
+                    <input class="form-control" asp-for="Description" />
+                </div>Description
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">
+                        Add
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

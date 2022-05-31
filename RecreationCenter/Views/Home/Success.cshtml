@@ -1,0 +1,22 @@
+﻿@model TaskTracker.Models.Task
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Success!</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body class="text-center">
+    <p>
+        <h1>Task added successfully!</h1>
+    </p>
+    <a class="nav-link" asp-action="ListTasks">Click here</a>
+    to see the list of tasks.
+</body>
+</html>

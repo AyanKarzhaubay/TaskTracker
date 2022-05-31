@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TaskTracker.Models.Task>
+
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <title>Tasks</title>
+</head>
+<body>
+    <div class="panel-body">
+        <h2>This is your to-do list:</h2>
+        <table class="table table-sm table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>AddingTime</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (TaskTracker.Models.Task r in Model) {
+                <tr>
+                    <td>@r.TaskID</td>
+                    <td>@r.Name</td>
+                    <td>@r.Description</td>
+                    <td>@r.AddingTime</td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
